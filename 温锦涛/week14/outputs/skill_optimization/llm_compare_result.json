@@ -1,0 +1,226 @@
+{
+  "initial": {
+    "label": "初始版(verbose)",
+    "accuracy": 1.0,
+    "correct": 11,
+    "total": 11,
+    "avg_prompt_tokens": 1162.4,
+    "avg_completion_tokens": 25.6,
+    "sum_prompt_tokens": 12786,
+    "sum_completion_tokens": 282,
+    "enc_prompt_tokens": 1723,
+    "details": [
+      {
+        "id": 35,
+        "question": "我买了一本电子书，想退款，可以吗？",
+        "answer": "数字商品一经购买，无论是否激活，均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1162,
+        "completion_tokens": 13
+      },
+      {
+        "id": 36,
+        "question": "软件激活码买了但还没激活，可以退款吗？",
+        "answer": "数字商品一经购买，无论是否激活，均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1162,
+        "completion_tokens": 13
+      },
+      {
+        "id": 37,
+        "question": "我是金卡VIP，买了游戏点卡，VIP能享受退款特权吗？",
+        "answer": "数字商品一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权，即使是金卡VIP用户，购买游戏点卡后也不可以退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1167,
+        "completion_tokens": 36
+      },
+      {
+        "id": 38,
+        "question": "数字商品在什么情况下可以退款？",
+        "answer": "数字商品只有在存在质量问题的情况下，才能通过提交工单并附上截图来申请退款。其他任何情况下，数字商品一经购买均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1158,
+        "completion_tokens": 32
+      },
+      {
+        "id": 39,
+        "question": "平台会员卡是数字商品吗？能退款吗？",
+        "answer": "是的，平台会员卡属于数字商品。数字商品一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1162,
+        "completion_tokens": 30
+      },
+      {
+        "id": 40,
+        "question": "买了电子书发现买错了，想退款怎么办？",
+        "answer": "数字商品一经购买，无论是否激活，均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1161,
+        "completion_tokens": 13
+      },
+      {
+        "id": 41,
+        "question": "软件激活码有质量问题，怎么申请退款？",
+        "answer": "数字商品存在质量问题时，用户需要提交一个工单（ticket）来申请退款，提交工单时需要附上截图作为证明，平台审核通过后才会处理。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1160,
+        "completion_tokens": 37
+      },
+      {
+        "id": 42,
+        "question": "银卡VIP购买了电子书，声称有VIP60天退款特权，可以退吗？",
+        "answer": "不可以。数字商品一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权，银卡VIP的60天退货特权在数字商品上不适用。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1169,
+        "completion_tokens": 38
+      },
+      {
+        "id": 43,
+        "question": "游戏点卡是数字商品吗？",
+        "answer": "是的，游戏点卡属于数字商品。数字商品一经购买，无论是否激活，均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1158,
+        "completion_tokens": 22
+      },
+      {
+        "id": 44,
+        "question": "我金卡VIP，刚买的电子书30分钟前下单，能退吗？",
+        "answer": "数字商品一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权，即使是金卡VIP用户，购买数字商品后也不可以退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1168,
+        "completion_tokens": 35
+      },
+      {
+        "id": 45,
+        "question": "电子书激活了之后还能退款吗？",
+        "answer": "数字商品一经购买，无论是否激活，均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 1159,
+        "completion_tokens": 13
+      }
+    ]
+  },
+  "optimized": {
+    "label": "优化版(compact)",
+    "accuracy": 1.0,
+    "correct": 11,
+    "total": 11,
+    "avg_prompt_tokens": 699.4,
+    "avg_completion_tokens": 40.7,
+    "sum_prompt_tokens": 7693,
+    "sum_completion_tokens": 448,
+    "enc_prompt_tokens": 980,
+    "details": [
+      {
+        "id": 35,
+        "question": "我买了一本电子书，想退款，可以吗？",
+        "answer": "数字商品（电子书/软件激活码/会员卡/游戏点卡）一经购买，无论是否激活，均不支持退款。唯一例外是质量问题，需提交工单并附截图证明。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 699,
+        "completion_tokens": 42
+      },
+      {
+        "id": 36,
+        "question": "软件激活码买了但还没激活，可以退款吗？",
+        "answer": "不可以。数字商品（含软件激活码）一经购买，无论是否激活，均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 699,
+        "completion_tokens": 21
+      },
+      {
+        "id": 37,
+        "question": "我是金卡VIP，买了游戏点卡，VIP能享受退款特权吗？",
+        "answer": "不能。数字商品（含游戏点卡）一经购买，无论是否激活，均不支持退款，此规则优先于一切VIP特权，金卡VIP亦不可退。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 704,
+        "completion_tokens": 36
+      },
+      {
+        "id": 38,
+        "question": "数字商品在什么情况下可以退款？",
+        "answer": "数字商品（电子书、软件激活码、平台会员卡、游戏点卡）一经购买，无论是否激活，均不支持退款。唯一例外是质量问题，需提交工单并附截图证明。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 695,
+        "completion_tokens": 43
+      },
+      {
+        "id": 39,
+        "question": "平台会员卡是数字商品吗？能退款吗？",
+        "answer": "是的，平台会员卡属于数字商品。数字商品一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权，金卡VIP亦不可退。唯一例外是质量问题，需提交工单并附截图证明。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 699,
+        "completion_tokens": 51
+      },
+      {
+        "id": 40,
+        "question": "买了电子书发现买错了，想退款怎么办？",
+        "answer": "数字商品（电子书/软件激活码/会员卡/游戏点卡）一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权，银卡60天、金卡90天退货期均不适用于数字商品，金卡VIP亦不可退。\n\n唯一例外是质量问题，需提交工单并附截图证明。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 698,
+        "completion_tokens": 74
+      },
+      {
+        "id": 41,
+        "question": "软件激活码有质量问题，怎么申请退款？",
+        "answer": "数字商品（含软件激活码）唯一例外是质量问题，需提交工单 + 附截图证明。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 697,
+        "completion_tokens": 23
+      },
+      {
+        "id": 42,
+        "question": "银卡VIP购买了电子书，声称有VIP60天退款特权，可以退吗？",
+        "answer": "不可以。数字商品（包括电子书）一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权，银卡60天退货期不适用于数字商品。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 706,
+        "completion_tokens": 39
+      },
+      {
+        "id": 43,
+        "question": "游戏点卡是数字商品吗？",
+        "answer": "是的，游戏点卡属于数字商品，一经购买，无论是否激活，均不支持退款。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 695,
+        "completion_tokens": 20
+      },
+      {
+        "id": 44,
+        "question": "我金卡VIP，刚买的电子书30分钟前下单，能退吗？",
+        "answer": "不能退。数字商品（电子书/软件激活码/会员卡/游戏点卡）一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权，金卡VIP亦不可退。唯一例外是质量问题，需提交工单+截图证明。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 705,
+        "completion_tokens": 59
+      },
+      {
+        "id": 45,
+        "question": "电子书激活了之后还能退款吗？",
+        "answer": "数字商品（包括电子书）一经购买，无论是否激活，均不支持退款。此规则优先于一切VIP特权。唯一例外是质量问题，需提交工单并附截图证明。",
+        "correct": true,
+        "reason": "correct",
+        "prompt_tokens": 696,
+        "completion_tokens": 40
+      }
+    ]
+  }
+}

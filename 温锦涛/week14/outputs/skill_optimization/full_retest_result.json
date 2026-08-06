@@ -1,0 +1,866 @@
+{
+  "baseline": {
+    "label": "baseline",
+    "accuracy": 0.183,
+    "correct": 11,
+    "total": 60,
+    "avg_prompt_tokens": 507.8,
+    "avg_output_tokens": 14.8,
+    "sum_prompt_tokens": 30466,
+    "enc_prompt_tokens": 695,
+    "by_category": {
+      "refund_basic": {
+        "total": 10,
+        "correct": 9,
+        "accuracy": 0.9
+      },
+      "vip_refund": {
+        "total": 12,
+        "correct": 1,
+        "accuracy": 0.083
+      },
+      "promotion_refund": {
+        "total": 12,
+        "correct": 1,
+        "accuracy": 0.083
+      },
+      "digital_goods": {
+        "total": 11,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "logistics": {
+        "total": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "payment_account": {
+        "total": 7,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "errors": [
+      {
+        "id": 10,
+        "category": "refund_basic",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我混合支付的，一部分微信一部分余额，退款怎么退？"
+      },
+      {
+        "id": 11,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是银卡VIP，商品收到45天了，可以退货吗？"
+      },
+      {
+        "id": 12,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '90'",
+        "question": "我是金卡VIP，退货期限是多少天？"
+      },
+      {
+        "id": 13,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '白卡'",
+        "question": "我是白卡VIP，商品收到35天了，想退货，可以吗？"
+      },
+      {
+        "id": 14,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '平台'",
+        "question": "我是银卡VIP，退货运费需要我自己付吗？"
+      },
+      {
+        "id": 15,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是银卡VIP，商品有轻微使用痕迹，还能退货吗？"
+      },
+      {
+        "id": 16,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '白卡'",
+        "question": "我是白卡VIP，退货运费是平台出还是我自己出？"
+      },
+      {
+        "id": 18,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是金卡VIP，商品收到65天了，能退货吗？"
+      },
+      {
+        "id": 19,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '60天'",
+        "question": "我是银卡VIP，商品收到62天了，能退货吗？"
+      },
+      {
+        "id": 20,
+        "category": "vip_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "金卡VIP退货时商品允许有使用痕迹吗？"
+      },
+      {
+        "id": 21,
+        "category": "vip_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "白卡VIP和普通用户的退款政策有什么区别？"
+      },
+      {
+        "id": 22,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '平台'",
+        "question": "银卡VIP商品有轻微划痕，20天了，退货运费谁出？"
+      },
+      {
+        "id": 24,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "我是银卡VIP，买的限时特惠商品，收到后第5天，可以退货吗？"
+      },
+      {
+        "id": 25,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "我是金卡VIP，买的限时特惠商品，收到后第8天，还能退货吗？"
+      },
+      {
+        "id": 26,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '不'",
+        "question": "我是白卡VIP，买了限时特惠商品，收到后3天，能退吗？"
+      },
+      {
+        "id": 27,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "我是银卡VIP，限时特惠商品，收到后第9天，来得及退货吗？"
+      },
+      {
+        "id": 28,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '平台'",
+        "question": "我是金卡VIP，限时特惠商品，收到4天，退货运费谁出？"
+      },
+      {
+        "id": 29,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "参加了满减活动，退了其中一件商品，需要补满减差价吗？"
+      },
+      {
+        "id": 30,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我用了新人券下单，退款之后券还会退给我吗？"
+      },
+      {
+        "id": 31,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "限时特惠商品可以叠加优惠券吗？"
+      },
+      {
+        "id": 32,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "积分商城兑换的商品可以退款吗？"
+      },
+      {
+        "id": 33,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "银卡VIP买限时特惠，收到5天，有轻微划痕，能退吗？"
+      },
+      {
+        "id": 34,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "满599减80的活动，我买了800元的东西，退了400元的商品，需要补差价吗？"
+      },
+      {
+        "id": 35,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我买了一本电子书，想退款，可以吗？"
+      },
+      {
+        "id": 36,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "软件激活码买了但还没激活，可以退款吗？"
+      },
+      {
+        "id": 37,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我是金卡VIP，买了游戏点卡，VIP能享受退款特权吗？"
+      },
+      {
+        "id": 38,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "数字商品在什么情况下可以退款？"
+      },
+      {
+        "id": 39,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "平台会员卡是数字商品吗？能退款吗？"
+      },
+      {
+        "id": 40,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "买了电子书发现买错了，想退款怎么办？"
+      },
+      {
+        "id": 41,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "软件激活码有质量问题，怎么申请退款？"
+      },
+      {
+        "id": 42,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "银卡VIP购买了电子书，声称有VIP60天退款特权，可以退吗？"
+      },
+      {
+        "id": 43,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "游戏点卡是数字商品吗？"
+      },
+      {
+        "id": 44,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我金卡VIP，刚买的电子书30分钟前下单，能退吗？"
+      },
+      {
+        "id": 45,
+        "category": "digital_goods",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "电子书激活了之后还能退款吗？"
+      },
+      {
+        "id": 46,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我刚付款2小时，订单还没发货，可以取消订单吗？"
+      },
+      {
+        "id": 47,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我付款3天了，订单还显示待发货，可以直接取消吗？"
+      },
+      {
+        "id": 48,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "标准配送需要几天可以收到？"
+      },
+      {
+        "id": 49,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "次日达服务需要几点前下单？在哪些城市有？"
+      },
+      {
+        "id": 50,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我在新疆，可以选次日达吗？"
+      },
+      {
+        "id": 51,
+        "category": "logistics",
+        "reason": "缺少关键词: '24小时'",
+        "question": "取消未发货订单，退款多久到账？"
+      },
+      {
+        "id": 52,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "付款后36小时，订单待发货，可以取消吗？"
+      },
+      {
+        "id": 53,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "满多少元可以免运费？"
+      },
+      {
+        "id": 54,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户余额可以提现吗？"
+      },
+      {
+        "id": 55,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "余额可以转给朋友吗？每天有上限吗？"
+      },
+      {
+        "id": 56,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我的订单用积分抵扣了10元，退款的话会退回多少积分？"
+      },
+      {
+        "id": 57,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我账户被冻结了，提交了退款申请，能被处理吗？"
+      },
+      {
+        "id": 58,
+        "category": "payment_account",
+        "reason": "缺少关键词: '4000'",
+        "question": "积分抵扣了50元，其余100元用银行卡付，申请退款后怎么退？"
+      },
+      {
+        "id": 59,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户被冻结，VIP权益还能使用吗？"
+      },
+      {
+        "id": 60,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户被冻结了怎么解冻？需要多久？"
+      }
+    ]
+  },
+  "initial": {
+    "label": "initial",
+    "accuracy": 0.4,
+    "correct": 24,
+    "total": 60,
+    "avg_prompt_tokens": 1163.8,
+    "avg_output_tokens": 21.4,
+    "sum_prompt_tokens": 69826,
+    "enc_prompt_tokens": 1723,
+    "by_category": {
+      "refund_basic": {
+        "total": 10,
+        "correct": 10,
+        "accuracy": 1.0
+      },
+      "vip_refund": {
+        "total": 12,
+        "correct": 2,
+        "accuracy": 0.167
+      },
+      "promotion_refund": {
+        "total": 12,
+        "correct": 1,
+        "accuracy": 0.083
+      },
+      "digital_goods": {
+        "total": 11,
+        "correct": 11,
+        "accuracy": 1.0
+      },
+      "logistics": {
+        "total": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "payment_account": {
+        "total": 7,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "errors": [
+      {
+        "id": 11,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是银卡VIP，商品收到45天了，可以退货吗？"
+      },
+      {
+        "id": 12,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '90'",
+        "question": "我是金卡VIP，退货期限是多少天？"
+      },
+      {
+        "id": 13,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '白卡'",
+        "question": "我是白卡VIP，商品收到35天了，想退货，可以吗？"
+      },
+      {
+        "id": 14,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '平台'",
+        "question": "我是银卡VIP，退货运费需要我自己付吗？"
+      },
+      {
+        "id": 15,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是银卡VIP，商品有轻微使用痕迹，还能退货吗？"
+      },
+      {
+        "id": 16,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '白卡'",
+        "question": "我是白卡VIP，退货运费是平台出还是我自己出？"
+      },
+      {
+        "id": 18,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是金卡VIP，商品收到65天了，能退货吗？"
+      },
+      {
+        "id": 19,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '60天'",
+        "question": "我是银卡VIP，商品收到62天了，能退货吗？"
+      },
+      {
+        "id": 20,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '轻微'",
+        "question": "金卡VIP退货时商品允许有使用痕迹吗？"
+      },
+      {
+        "id": 22,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '平台'",
+        "question": "银卡VIP商品有轻微划痕，20天了，退货运费谁出？"
+      },
+      {
+        "id": 24,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "我是银卡VIP，买的限时特惠商品，收到后第5天，可以退货吗？"
+      },
+      {
+        "id": 25,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "我是金卡VIP，买的限时特惠商品，收到后第8天，还能退货吗？"
+      },
+      {
+        "id": 26,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我是白卡VIP，买了限时特惠商品，收到后3天，能退吗？"
+      },
+      {
+        "id": 27,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我是银卡VIP，限时特惠商品，收到后第9天，来得及退货吗？"
+      },
+      {
+        "id": 28,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我是金卡VIP，限时特惠商品，收到4天，退货运费谁出？"
+      },
+      {
+        "id": 29,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "参加了满减活动，退了其中一件商品，需要补满减差价吗？"
+      },
+      {
+        "id": 30,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我用了新人券下单，退款之后券还会退给我吗？"
+      },
+      {
+        "id": 31,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "限时特惠商品可以叠加优惠券吗？"
+      },
+      {
+        "id": 32,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "积分商城兑换的商品可以退款吗？"
+      },
+      {
+        "id": 33,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "银卡VIP买限时特惠，收到5天，有轻微划痕，能退吗？"
+      },
+      {
+        "id": 34,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "满599减80的活动，我买了800元的东西，退了400元的商品，需要补差价吗？"
+      },
+      {
+        "id": 46,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我刚付款2小时，订单还没发货，可以取消订单吗？"
+      },
+      {
+        "id": 47,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我付款3天了，订单还显示待发货，可以直接取消吗？"
+      },
+      {
+        "id": 48,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "标准配送需要几天可以收到？"
+      },
+      {
+        "id": 49,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "次日达服务需要几点前下单？在哪些城市有？"
+      },
+      {
+        "id": 50,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我在新疆，可以选次日达吗？"
+      },
+      {
+        "id": 51,
+        "category": "logistics",
+        "reason": "缺少关键词: '24小时'",
+        "question": "取消未发货订单，退款多久到账？"
+      },
+      {
+        "id": 52,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "付款后36小时，订单待发货，可以取消吗？"
+      },
+      {
+        "id": 53,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "满多少元可以免运费？"
+      },
+      {
+        "id": 54,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户余额可以提现吗？"
+      },
+      {
+        "id": 55,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "余额可以转给朋友吗？每天有上限吗？"
+      },
+      {
+        "id": 56,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我的订单用积分抵扣了10元，退款的话会退回多少积分？"
+      },
+      {
+        "id": 57,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我账户被冻结了，提交了退款申请，能被处理吗？"
+      },
+      {
+        "id": 58,
+        "category": "payment_account",
+        "reason": "缺少关键词: '4000'",
+        "question": "积分抵扣了50元，其余100元用银行卡付，申请退款后怎么退？"
+      },
+      {
+        "id": 59,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户被冻结，VIP权益还能使用吗？"
+      },
+      {
+        "id": 60,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户被冻结了怎么解冻？需要多久？"
+      }
+    ]
+  },
+  "optimized": {
+    "label": "optimized",
+    "accuracy": 0.383,
+    "correct": 23,
+    "total": 60,
+    "avg_prompt_tokens": 700.8,
+    "avg_output_tokens": 25.4,
+    "sum_prompt_tokens": 42046,
+    "enc_prompt_tokens": 980,
+    "by_category": {
+      "refund_basic": {
+        "total": 10,
+        "correct": 9,
+        "accuracy": 0.9
+      },
+      "vip_refund": {
+        "total": 12,
+        "correct": 3,
+        "accuracy": 0.25
+      },
+      "promotion_refund": {
+        "total": 12,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "digital_goods": {
+        "total": 11,
+        "correct": 11,
+        "accuracy": 1.0
+      },
+      "logistics": {
+        "total": 8,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "payment_account": {
+        "total": 7,
+        "correct": 0,
+        "accuracy": 0.0
+      }
+    },
+    "errors": [
+      {
+        "id": 10,
+        "category": "refund_basic",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我混合支付的，一部分微信一部分余额，退款怎么退？"
+      },
+      {
+        "id": 11,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是银卡VIP，商品收到45天了，可以退货吗？"
+      },
+      {
+        "id": 12,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '90'",
+        "question": "我是金卡VIP，退货期限是多少天？"
+      },
+      {
+        "id": 13,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '白卡'",
+        "question": "我是白卡VIP，商品收到35天了，想退货，可以吗？"
+      },
+      {
+        "id": 14,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '平台'",
+        "question": "我是银卡VIP，退货运费需要我自己付吗？"
+      },
+      {
+        "id": 15,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是银卡VIP，商品有轻微使用痕迹，还能退货吗？"
+      },
+      {
+        "id": 16,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '白卡'",
+        "question": "我是白卡VIP，退货运费是平台出还是我自己出？"
+      },
+      {
+        "id": 18,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '可以'",
+        "question": "我是金卡VIP，商品收到65天了，能退货吗？"
+      },
+      {
+        "id": 20,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '轻微'",
+        "question": "金卡VIP退货时商品允许有使用痕迹吗？"
+      },
+      {
+        "id": 22,
+        "category": "vip_refund",
+        "reason": "缺少关键词: '平台'",
+        "question": "银卡VIP商品有轻微划痕，20天了，退货运费谁出？"
+      },
+      {
+        "id": 23,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '不'",
+        "question": "我买的是限时特惠商品，普通用户，能退货吗？"
+      },
+      {
+        "id": 24,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "我是银卡VIP，买的限时特惠商品，收到后第5天，可以退货吗？"
+      },
+      {
+        "id": 25,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "我是金卡VIP，买的限时特惠商品，收到后第8天，还能退货吗？"
+      },
+      {
+        "id": 26,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我是白卡VIP，买了限时特惠商品，收到后3天，能退吗？"
+      },
+      {
+        "id": 27,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我是银卡VIP，限时特惠商品，收到后第9天，来得及退货吗？"
+      },
+      {
+        "id": 28,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我是金卡VIP，限时特惠商品，收到4天，退货运费谁出？"
+      },
+      {
+        "id": 29,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "参加了满减活动，退了其中一件商品，需要补满减差价吗？"
+      },
+      {
+        "id": 30,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我用了新人券下单，退款之后券还会退给我吗？"
+      },
+      {
+        "id": 31,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "限时特惠商品可以叠加优惠券吗？"
+      },
+      {
+        "id": 32,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "积分商城兑换的商品可以退款吗？"
+      },
+      {
+        "id": 33,
+        "category": "promotion_refund",
+        "reason": "缺少关键词: '7天'",
+        "question": "银卡VIP买限时特惠，收到5天，有轻微划痕，能退吗？"
+      },
+      {
+        "id": 34,
+        "category": "promotion_refund",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "满599减80的活动，我买了800元的东西，退了400元的商品，需要补差价吗？"
+      },
+      {
+        "id": 46,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我刚付款2小时，订单还没发货，可以取消订单吗？"
+      },
+      {
+        "id": 47,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我付款3天了，订单还显示待发货，可以直接取消吗？"
+      },
+      {
+        "id": 48,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "标准配送需要几天可以收到？"
+      },
+      {
+        "id": 49,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "次日达服务需要几点前下单？在哪些城市有？"
+      },
+      {
+        "id": 50,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我在新疆，可以选次日达吗？"
+      },
+      {
+        "id": 51,
+        "category": "logistics",
+        "reason": "缺少关键词: '24小时'",
+        "question": "取消未发货订单，退款多久到账？"
+      },
+      {
+        "id": 52,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "付款后36小时，订单待发货，可以取消吗？"
+      },
+      {
+        "id": 53,
+        "category": "logistics",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "满多少元可以免运费？"
+      },
+      {
+        "id": 54,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户余额可以提现吗？"
+      },
+      {
+        "id": 55,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "余额可以转给朋友吗？每天有上限吗？"
+      },
+      {
+        "id": 56,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我的订单用积分抵扣了10元，退款的话会退回多少积分？"
+      },
+      {
+        "id": 57,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "我账户被冻结了，提交了退款申请，能被处理吗？"
+      },
+      {
+        "id": 58,
+        "category": "payment_account",
+        "reason": "缺少关键词: '4000'",
+        "question": "积分抵扣了50元，其余100元用银行卡付，申请退款后怎么退？"
+      },
+      {
+        "id": 59,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户被冻结，VIP权益还能使用吗？"
+      },
+      {
+        "id": 60,
+        "category": "payment_account",
+        "reason": "Agent 推脱（含 '联系人工'）",
+        "question": "账户被冻结了怎么解冻？需要多久？"
+      }
+    ]
+  }
+}

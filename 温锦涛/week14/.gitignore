@@ -1,0 +1,10 @@
+# API keys / secrets — 永不提交
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
